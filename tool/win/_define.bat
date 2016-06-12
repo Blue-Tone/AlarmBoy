@@ -1,7 +1,7 @@
 echo off
 
 rem set arduino COM port nomber
-set COM=4
+set COM=5
 
 rem if not default install path teraterm,
 rem set teraterm path or add teraterm path to PATH environment variable.
@@ -15,12 +15,17 @@ if not exist %TT_PATH% echo ###Error###:not exist %TT_PATH%. in %~0
 rem define command
 set ERR_ON=c
 set ERR_OFF=C
-set NG_ON=d
-set NG_OFF=D
-set OK_ON=e
-set OK_OFF=E
-set BUILD_ON=f
-set BUILD_OFF=F
+set WARN_ON=d
+set WARN_OFF=D
+set NG_ON=e
+set NG_OFF=E
+set OK_ON=f
+set OK_OFF=F
+set TEST_ON=i
+set TEST_OFF=I
+set BUILD_ON=j
+set BUILD_OFF=J
 set OK_SOUND=T
 set NG_SOUND=t
+
 

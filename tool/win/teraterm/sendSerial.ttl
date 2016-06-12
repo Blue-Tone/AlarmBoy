@@ -3,7 +3,7 @@ conArg='/C='
 strconcat conArg param2
 strconcat conArg ' /BAUD=9600'
 
-connect '/C=4 /BAUD=9600'
+connect conArg
 
 ; reset pin open, need wakeup time 2s
 ; pause 2
