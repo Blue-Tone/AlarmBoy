@@ -24,6 +24,9 @@ void loop() {
   int input;
   input = Serial.read();
 
+  if(-1 != input){
+    Serial.println(input);
+  }
   // dispatch Serial input
   if(-1 == input){
     // nop. no input.
