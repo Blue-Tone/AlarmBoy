@@ -1,5 +1,5 @@
 
-call %~dp0\..\_define.bat
+call %~dp0..\_define.bat
 
 if not exist %TT_PATH% pause
 if exist %TT_PATH% echo OK:exist %TT_PATH%
