@@ -1,50 +1,11 @@
 
-D=`dirname $0`
-source $D/../_define.bat
+D=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
+echo $D
+source $D/../_define.sh
+echo $D
 
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
-node $D/sendSerial.js $COM cdefghijt
-TIMEOUT 2
-node $D/sendSerial.js $COM CDEFGHIJT
-TIMEOUT 2
+node $D/SendSerial.js $COM cdefghijt
+sleep 2
+node $D/SendSerial.js $COM CDEFGHIJT
+sleep 2
 
-pause

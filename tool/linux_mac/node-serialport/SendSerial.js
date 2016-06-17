@@ -2,7 +2,7 @@
 	//console.log('msg=' + process.argv[3]);
 
 var serialport = require("serialport");
-var sp = new serialport.SerialPort("COM" + process.argv[2], {
+var sp = new serialport.SerialPort( process.argv[2], {
 	baudrate: 9600,
 	dataBits:8,
 	parity:'none',

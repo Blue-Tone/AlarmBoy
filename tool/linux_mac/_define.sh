@@ -4,21 +4,25 @@ echo off
 # Environment dependent Config. ä¬ã´àÀë∂ê›íË
 
 # set NODE_PATH. for call node-serialport
-#NODE_PATH=C:\Users\admin\AppData\Roaming\npm\node_modules
+#NODE_PATH=/home/yukio/.nvm/versions/node/v6.2.2/lib
+#export NODE_PATH
 
 # set arduino COM port number
-COM=5
+COM=/dev/ttyUSB0
+export COM
 
 # set jenkins userID
 USER=apiUser
+export USER
 
 # set jenkins userAPI token
 API_TOKEN=2200a230d4748bf84a3688b8891ae997
+export API_TOKEN
 
 
 # -------------- define command -------------
-D=`dirname $0`
-source $D/_definePin.sh
+THIS_DEFINE_PATH=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
+source $THIS_DEFINE_PATH/_definePin.sh
 
 ERR_ON=$D2_ON
 ERR_OFF=$D2__OFF
