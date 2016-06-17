@@ -6,7 +6,13 @@ rem set NODE_PATH. for call node-serialport
 set NODE_PATH=C:\Users\admin\AppData\Roaming\npm\node_modules
 
 rem set arduino COM port number
-set COM=3
+set COM=5
+
+rem set jenkins userID
+set USER=apiUser
+
+rem set jenkins userAPI token
+set API_TOKEN=2200a230d4748bf84a3688b8891ae997
 
 
 rem -------------- define command -------------
