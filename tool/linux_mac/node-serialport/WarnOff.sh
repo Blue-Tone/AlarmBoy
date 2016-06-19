@@ -1,7 +1,8 @@
 
-call %~dp0..\_define.bat
+D=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
+source $D/../_define.sh
 
-node %~dp0\sendSerial.js %COM% %WARN_OFF%
+node $D/SendSerial.js $COM $WARN_OFF
 
 
 

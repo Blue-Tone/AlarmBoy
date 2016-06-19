@@ -1,11 +1,11 @@
 
-call %~dp0..\_define.bat
+D=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
+source $D/../_define.sh
 
-node %~dp0\sendSerial.js %COM% %BUILD_OFF%%TESTING_OFF%%OK_OFF%%NG_ON%%ERR_ON%%NG_SOUND%
+node $D/SendSerial.js $COM $BUILD_OFF$TESTING_OFF$OK_OFF$NG_ON$ERR_ON$NG_SOUND
 
-rem sleep 1s
-ping 127.0.0.1 -n2 >nul
+sleep 1s
 
-rem NG_SOUND again
-node %~dp0\sendSerial.js %COM% %NG_SOUND%
+# NG_SOUND again
+node $D/SendSerial.js $COM $NG_SOUND
 
