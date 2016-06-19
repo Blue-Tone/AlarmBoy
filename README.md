@@ -1,20 +1,21 @@
-# AlarmBoy
-Arduino Simple XFD
-
+AlarmBoy is Arduino Simple XFD.Open source hardware and software.  
+for Jenkins,Server monitoring,mail alart,etc...  
+github page https://github.com/Blue-Tone/AlarmBoy  
 
 ###Wiring diagram
-![îzê¸ê}](https://raw.github.com/wiki/Blue-Tone/AlarmBoy/images/AlarmBoy_Fritzing.jpg)
+![ÈÖçÁ∑öÂõ≥](https://raw.github.com/wiki/Blue-Tone/AlarmBoy/images/AlarmBoy_Fritzing.jpg)
 
 ###OverView
-![äTîOê}](https://raw.github.com/wiki/Blue-Tone/AlarmBoy/images/Overview.jpg)
+![Ê¶ÇÂøµÂõ≥](https://raw.github.com/wiki/Blue-Tone/AlarmBoy/images/Overview.jpg)
 
-###Demo
+###Demo(YouTube)  
+http://youtu.be/rYR4N6fq2Xw  
 [![Demo](http://img.youtube.com/vi/rYR4N6fq2Xw/0.jpg)](https://www.youtube.com/watch?v=rYR4N6fq2Xw)
 
 #SetUp
 ##node-serialport
-instal node.
-npm install -g serialport
+instal node.  
+`npm install -g serialport`
 
 ##_config.bat
 NODE_PATH,COM port number,api token
@@ -28,23 +29,21 @@ Post build task
 https://wiki.jenkins-ci.org/display/JENKINS/Post+build+task
 
 ###add 3task
-1. before build
+1. before build  
+`call C:\AlarmBoy\tool\win\node-serialport\BuildOn.bat`
 
-    call C:\AlarmBoy\tool\win\node-serialport\BuildOn.bat
+2. after build,before test  
+`call C:\AlarmBoy\tool\win\node-serialport\testingOn.bat`  
+`call C:\AlarmBoy\tool\win\node-serialport\BuildOff.bat`
 
-2. after build,before test
+3. after publish test result  
+`set JOB_URL=http://[Jenkins URL]/job/TestJob/`  
+`call C:\AlarmBoy\tool\win\postBuild.bat`
 
-    call C:\AlarmBoy\tool\win\node-serialport\testingOn.bat 
+PipeLineScript  
+`sh 'bash /Users/[username]/AlarmBoy/tool/linux_mac/node-serialport/BuildOn.sh'`
 
-    call C:\AlarmBoy\tool\win\node-serialport\BuildOff.bat
-
-3. after publish test result
-
-    set JOB_URL=http://[Jenkins URL]/job/TestJob/ 
-
-    call C:\AlarmBoy\tool\win\postBuild.bat
-
-###Commands
+##Commands
 
 <table>
     <tr>
@@ -100,5 +99,4 @@ https://wiki.jenkins-ci.org/display/JENKINS/Post+build+task
 push A3:Button,then D2:Blink OFF.
 
 
-#for Linux and Mac Soon!!
-
+### 16/06/20. sh for Linux and Mac Released!
