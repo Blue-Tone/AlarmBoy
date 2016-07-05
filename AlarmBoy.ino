@@ -17,6 +17,23 @@ void setup() {
   Serial.begin(9600);
   Serial.print("ver : ");
   Serial.println(VERSION);
+
+  // start up LED On Off
+  for(int i=D_START; i <= 9; i++){
+    digitalWrite(i, HIGH);
+  }
+  delay(2000);
+  for(int i=D_START; i <= 9; i++){
+    digitalWrite(i, LOW);
+  }
+  delay(500);
+  for(int i=D_START; i <= 9; i++){
+    digitalWrite(i, HIGH);
+  }
+  delay(2000);
+  for(int i=D_START; i <= 9; i++){
+    digitalWrite(i, LOW);
+  }
 }
 
 void loop() {
